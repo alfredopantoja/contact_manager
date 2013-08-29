@@ -12,4 +12,14 @@ describe Person do
   it { should respond_to(:last_name) }
 
   it { should be_valid }
+
+  describe "when first_name is not present" do
+    before { @person.first_name = nil }
+    it { should_not be_valid }
+  end  
+
+  describe "when last_name is not present" do
+    before { @person.last_name = nil }
+    it { should_not be_valid }
+  end  
 end
