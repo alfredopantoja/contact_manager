@@ -1,0 +1,5 @@
+<li>
+  <%= link_to person.name, person %>
+  | <%= link_to "delete", person, method: :delete, 
+                                data: { confirm: "You sure?" } %>
+</li>
